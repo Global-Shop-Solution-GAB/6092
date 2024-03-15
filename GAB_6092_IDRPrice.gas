@@ -1,0 +1,1094 @@
+Program.Sub.ScreenSU.Start
+gui.F_SO_IDRPrice..create
+gui.F_SO_IDRPrice..caption("Sales Order - Line (IDR Price)")
+gui.F_SO_IDRPrice..size(3600,2865)
+gui.F_SO_IDRPrice..minx(0)
+gui.F_SO_IDRPrice..miny(0)
+gui.F_SO_IDRPrice..position(0,0)
+gui.F_SO_IDRPrice..event(unload,F_End)
+gui.F_SO_IDRPrice..alwaysontop(False)
+gui.F_SO_IDRPrice..fontname("Arial")
+gui.F_SO_IDRPrice..fontsize(8)
+gui.F_SO_IDRPrice..forecolor(0)
+gui.F_SO_IDRPrice..fontstyle(,,,,)
+gui.F_SO_IDRPrice..BackColor(-2147483633)
+gui.F_SO_IDRPrice..controlbox(True)
+gui.F_SO_IDRPrice..maxbutton(False)
+gui.F_SO_IDRPrice..minbutton(False)
+gui.F_SO_IDRPrice..mousepointer(0)
+gui.F_SO_IDRPrice..moveable(True)
+gui.F_SO_IDRPrice..sizeable(True)
+gui.F_SO_IDRPrice..ShowInTaskBar(True)
+gui.F_SO_IDRPrice..titlebar(True)
+gui.F_SO_IDRPrice.lblIDRPrice.create(label,"IDR Price:",True,780,255,1,620,200,True,0,Arial,8,-2147483633,0)
+gui.F_SO_IDRPrice.lblIDRPrice.defaultvalue("")
+gui.F_SO_IDRPrice.lblIDRPrice.controlgroup(0)
+gui.F_SO_IDRPrice.cmdSave.create(button)
+gui.F_SO_IDRPrice.cmdSave.caption("Save")
+gui.F_SO_IDRPrice.cmdSave.visible(True)
+gui.F_SO_IDRPrice.cmdSave.size(855,375)
+gui.F_SO_IDRPrice.cmdSave.zorder(0)
+gui.F_SO_IDRPrice.cmdSave.position(1210,1770)
+gui.F_SO_IDRPrice.cmdSave.enabled(True)
+gui.F_SO_IDRPrice.cmdSave.fontname("Arial")
+gui.F_SO_IDRPrice.cmdSave.fontsize(8)
+gui.F_SO_IDRPrice.cmdSave.event(click,cmdsave_click)
+gui.F_SO_IDRPrice.cmdSave.defaultvalue("")
+gui.F_SO_IDRPrice.cmdSave.controlgroup(0)
+gui.F_SO_IDRPrice.txtIDRPrice.create(textbox,"",True,2265,300,0,580,470,True,0,Arial,8,-2147483643,1)
+gui.F_SO_IDRPrice.txtIDRPrice.event(change,txtidrprice_change)
+gui.F_SO_IDRPrice.txtIDRPrice.numericonly(1)
+gui.F_SO_IDRPrice.txtIDRPrice.maxLength(10)
+gui.F_SO_IDRPrice.txtIDRPrice.defaultvalue("")
+gui.F_SO_IDRPrice.txtIDRPrice.controlgroup(0)
+gui.F_SO_IDRPrice.lblGSPrice.create(label,"Global Shop Price (IDR/1000)",True,2160,255,1,620,900,True,0,Arial,8,-2147483633,0)
+gui.F_SO_IDRPrice.lblGSPrice.defaultvalue("")
+gui.F_SO_IDRPrice.lblGSPrice.controlgroup(0)
+gui.F_SO_IDRPrice.txtGSPrice.create(textbox,"",True,2220,300,0,590,1210,False,0,Arial,8,-2147483643,1)
+gui.F_SO_IDRPrice.txtGSPrice.event(change,txtgsprice_change)
+gui.F_SO_IDRPrice.txtGSPrice.numericonly(1)
+gui.F_SO_IDRPrice.txtGSPrice.maxLength(13)
+gui.F_SO_IDRPrice.txtGSPrice.defaultvalue("")
+gui.F_SO_IDRPrice.txtGSPrice.controlgroup(0)
+gui.F_SO_IDRPrice.txtIDRPrice.tabstop(True)
+gui.F_SO_IDRPrice.txtIDRPrice.tabindex(1)
+gui.F_SO_IDRPrice.txtGSPrice.tabstop(True)
+gui.F_SO_IDRPrice.txtGSPrice.tabindex(2)
+gui.F_SO_IDRPrice.cmdSave.tabstop(True)
+gui.F_SO_IDRPrice.cmdSave.tabindex(3)
+
+
+gui.F_PO_IDRPrice..create
+gui.F_PO_IDRPrice..caption("PO - Line (IDR Price)")
+gui.F_PO_IDRPrice..size(7005,3345)
+gui.F_PO_IDRPrice..minx(0)
+gui.F_PO_IDRPrice..miny(0)
+gui.F_PO_IDRPrice..position(0,0)
+gui.F_PO_IDRPrice..event(unload,F_End)
+gui.F_PO_IDRPrice..alwaysontop(False)
+gui.F_PO_IDRPrice..fontname("Arial")
+gui.F_PO_IDRPrice..fontsize(8)
+gui.F_PO_IDRPrice..forecolor(0)
+gui.F_PO_IDRPrice..fontstyle(,,,,)
+gui.F_PO_IDRPrice..BackColor(-2147483633)
+gui.F_PO_IDRPrice..controlbox(True)
+gui.F_PO_IDRPrice..maxbutton(False)
+gui.F_PO_IDRPrice..minbutton(False)
+gui.F_PO_IDRPrice..mousepointer(0)
+gui.F_PO_IDRPrice..moveable(True)
+gui.F_PO_IDRPrice..sizeable(True)
+gui.F_PO_IDRPrice..ShowInTaskBar(True)
+gui.F_PO_IDRPrice..titlebar(True)
+gui.F_PO_IDRPrice.lblPurCostIDR.create(label,"IDR Price - Pur Cost",True,1935,255,1,200,200,True,0,Arial,8,-2147483633,0)
+gui.F_PO_IDRPrice.lblPurCostIDR.defaultvalue("")
+gui.F_PO_IDRPrice.lblPurCostIDR.controlgroup(0)
+gui.F_PO_IDRPrice.txtIPurCostIDR.create(textbox,"",True,2000,300,0,175,500,True,0,Arial,8,-2147483643,1)
+gui.F_PO_IDRPrice.txtIPurCostIDR.numericonly(1)
+gui.F_PO_IDRPrice.txtIPurCostIDR.maxLength(10)
+gui.F_PO_IDRPrice.txtIPurCostIDR.event(lostfocus,txtipurcostidr_change)
+gui.F_PO_IDRPrice.txtIPurCostIDR.defaultvalue("")
+gui.F_PO_IDRPrice.txtIPurCostIDR.controlgroup(0)
+gui.F_PO_IDRPrice.lblInvCostIDR.create(label,"IDR Price - Inv Cost",True,1935,255,1,2345,200,True,0,Arial,8,-2147483633,0)
+gui.F_PO_IDRPrice.lblInvCostIDR.defaultvalue("")
+gui.F_PO_IDRPrice.lblInvCostIDR.controlgroup(0)
+gui.F_PO_IDRPrice.txtInvCostIDR.create(textbox,"",True,2000,300,0,2300,500,False,0,Arial,8,-2147483643,1)
+gui.F_PO_IDRPrice.txtInvCostIDR.numericonly(1)
+gui.F_PO_IDRPrice.txtInvCostIDR.maxLength(10)
+gui.F_PO_IDRPrice.txtInvCostIDR.defaultvalue("")
+gui.F_PO_IDRPrice.txtInvCostIDR.controlgroup(0)
+gui.F_PO_IDRPrice.lblConvFactor.create(label,"Conversion Factor",True,1440,255,1,4800,200,True,0,Arial,8,-2147483633,0)
+gui.F_PO_IDRPrice.lblConvFactor.defaultvalue("")
+gui.F_PO_IDRPrice.lblConvFactor.controlgroup(0)
+gui.F_PO_IDRPrice.txtConvFact.create(textbox,"1",True,1365,300,0,4790,475,False,0,Arial,8,-2147483643,1)
+gui.F_PO_IDRPrice.txtConvFact.defaultvalue("")
+gui.F_PO_IDRPrice.txtConvFact.controlgroup(0)
+gui.F_PO_IDRPrice.lblPurCostGS.create(label,"Global Shop Pur Cost",True,1815,255,1,245,1255,True,0,Arial,8,-2147483633,0)
+gui.F_PO_IDRPrice.lblPurCostGS.defaultvalue("")
+gui.F_PO_IDRPrice.lblPurCostGS.controlgroup(0)
+gui.F_PO_IDRPrice.txtPurCostGS.create(textbox,"",True,2000,300,0,200,1500,False,0,Arial,8,-2147483643,1)
+gui.F_PO_IDRPrice.txtPurCostGS.numericonly(1)
+gui.F_PO_IDRPrice.txtPurCostGS.maxLength(16)
+gui.F_PO_IDRPrice.txtPurCostGS.defaultvalue("")
+gui.F_PO_IDRPrice.txtPurCostGS.controlgroup(0)
+gui.F_PO_IDRPrice.lblInvCostGS.create(label,"Global Shop - Inv Cost",True,1935,255,1,2360,1255,True,0,Arial,8,-2147483633,0)
+gui.F_PO_IDRPrice.lblInvCostGS.defaultvalue("")
+gui.F_PO_IDRPrice.lblInvCostGS.controlgroup(0)
+gui.F_PO_IDRPrice.txtInvCostGS.create(textbox,"",True,2000,300,0,2295,1500,False,0,Arial,8,-2147483643,1)
+gui.F_PO_IDRPrice.txtInvCostGS.numericonly(1)
+gui.F_PO_IDRPrice.txtInvCostGS.maxLength(16)
+gui.F_PO_IDRPrice.txtInvCostGS.defaultvalue("")
+gui.F_PO_IDRPrice.txtInvCostGS.controlgroup(0)
+gui.F_PO_IDRPrice.cmdPOSave.create(button)
+gui.F_PO_IDRPrice.cmdPOSave.caption("Save")
+gui.F_PO_IDRPrice.cmdPOSave.visible(True)
+gui.F_PO_IDRPrice.cmdPOSave.size(855,375)
+gui.F_PO_IDRPrice.cmdPOSave.zorder(0)
+gui.F_PO_IDRPrice.cmdPOSave.position(2920,2115)
+gui.F_PO_IDRPrice.cmdPOSave.enabled(True)
+gui.F_PO_IDRPrice.cmdPOSave.fontname("Arial")
+gui.F_PO_IDRPrice.cmdPOSave.fontsize(8)
+gui.F_PO_IDRPrice.cmdPOSave.event(click,cmdposave_click)
+gui.F_PO_IDRPrice.cmdPOSave.defaultvalue("")
+gui.F_PO_IDRPrice.cmdPOSave.controlgroup(0)
+gui.F_PO_IDRPrice.txtIPurCostIDR.tabstop(True)
+gui.F_PO_IDRPrice.txtIPurCostIDR.tabindex(1)
+gui.F_PO_IDRPrice.txtInvCostIDR.tabstop(True)
+gui.F_PO_IDRPrice.txtInvCostIDR.tabindex(2)
+gui.F_PO_IDRPrice.txtPurCostGS.tabstop(True)
+gui.F_PO_IDRPrice.txtPurCostGS.tabindex(3)
+gui.F_PO_IDRPrice.txtInvCostGS.tabstop(True)
+gui.F_PO_IDRPrice.txtInvCostGS.tabindex(4)
+gui.F_PO_IDRPrice.cmdPOSave.tabstop(True)
+gui.F_PO_IDRPrice.cmdPOSave.tabindex(5)
+
+
+gui.F_QT_IDRPrice..create
+gui.F_QT_IDRPrice..caption("Quote - Line (IDR Price)")
+gui.F_QT_IDRPrice..size(3600,2865)
+gui.F_QT_IDRPrice..minx(0)
+gui.F_QT_IDRPrice..miny(0)
+gui.F_QT_IDRPrice..position(0,0)
+gui.F_QT_IDRPrice..event(unload,F_End)
+gui.F_QT_IDRPrice..alwaysontop(False)
+gui.F_QT_IDRPrice..fontname("Arial")
+gui.F_QT_IDRPrice..fontsize(8)
+gui.F_QT_IDRPrice..forecolor(0)
+gui.F_QT_IDRPrice..fontstyle(,,,,)
+gui.F_QT_IDRPrice..BackColor(-2147483633)
+gui.F_QT_IDRPrice..controlbox(True)
+gui.F_QT_IDRPrice..maxbutton(False)
+gui.F_QT_IDRPrice..minbutton(False)
+gui.F_QT_IDRPrice..mousepointer(0)
+gui.F_QT_IDRPrice..moveable(True)
+gui.F_QT_IDRPrice..sizeable(True)
+gui.F_QT_IDRPrice..ShowInTaskBar(True)
+gui.F_QT_IDRPrice..titlebar(True)
+gui.F_QT_IDRPrice.lblIDRPrice.create(label,"IDR Price:",True,1935,255,1,650,200,True,0,Arial,8,-2147483633,0)
+gui.F_QT_IDRPrice.lblIDRPrice.defaultvalue("")
+gui.F_QT_IDRPrice.lblIDRPrice.controlgroup(0)
+gui.F_QT_IDRPrice.txtIDRPrice.create(textbox,"",True,2160,300,0,620,415,True,0,Arial,8,-2147483643,1)
+gui.F_QT_IDRPrice.txtIDRPrice.event(change,txtqtidrprice_change)
+gui.F_QT_IDRPrice.txtIDRPrice.numericonly(1)
+gui.F_QT_IDRPrice.txtIDRPrice.maxLength(10)
+gui.F_QT_IDRPrice.txtIDRPrice.defaultvalue("")
+gui.F_QT_IDRPrice.txtIDRPrice.controlgroup(0)
+gui.F_QT_IDRPrice.lblGSPrice.create(label,"Global Shop Price (IDR/1000)",True,2175,255,1,650,900,True,0,Arial,8,-2147483633,0)
+gui.F_QT_IDRPrice.lblGSPrice.defaultvalue("")
+gui.F_QT_IDRPrice.lblGSPrice.controlgroup(0)
+gui.F_QT_IDRPrice.txtGSPrice.create(textbox,"",True,2145,300,0,620,1200,False,0,Arial,8,-2147483643,1)
+gui.F_QT_IDRPrice.txtGSPrice.event(change,txtqtgsprice_change)
+gui.F_QT_IDRPrice.txtGSPrice.numericonly(1)
+gui.F_QT_IDRPrice.txtGSPrice.maxLength(13)
+gui.F_QT_IDRPrice.txtGSPrice.defaultvalue("")
+gui.F_QT_IDRPrice.txtGSPrice.controlgroup(0)
+gui.F_QT_IDRPrice.cmdQTSave.create(button)
+gui.F_QT_IDRPrice.cmdQTSave.caption("Save")
+gui.F_QT_IDRPrice.cmdQTSave.visible(True)
+gui.F_QT_IDRPrice.cmdQTSave.size(855,375)
+gui.F_QT_IDRPrice.cmdQTSave.zorder(0)
+gui.F_QT_IDRPrice.cmdQTSave.position(1300,1750)
+gui.F_QT_IDRPrice.cmdQTSave.enabled(True)
+gui.F_QT_IDRPrice.cmdQTSave.fontname("Arial")
+gui.F_QT_IDRPrice.cmdQTSave.fontsize(8)
+gui.F_QT_IDRPrice.cmdQTSave.event(click,cmdqtsave_click)
+gui.F_QT_IDRPrice.cmdQTSave.defaultvalue("")
+gui.F_QT_IDRPrice.cmdQTSave.controlgroup(0)
+gui.F_QT_IDRPrice.txtIDRPrice.tabstop(True)
+gui.F_QT_IDRPrice.txtIDRPrice.tabindex(1)
+gui.F_QT_IDRPrice.txtGSPrice.tabstop(True)
+gui.F_QT_IDRPrice.txtGSPrice.tabindex(2)
+gui.F_QT_IDRPrice.cmdQTSave.tabstop(True)
+gui.F_QT_IDRPrice.cmdQTSave.tabindex(3)
+
+
+gui.F_APO_IDRPrice..create
+gui.F_APO_IDRPrice..caption("Automatic Purchasing (IDR Price)")
+gui.F_APO_IDRPrice..size(8220,3465)
+gui.F_APO_IDRPrice..minx(0)
+gui.F_APO_IDRPrice..miny(0)
+gui.F_APO_IDRPrice..position(0,0)
+gui.F_APO_IDRPrice..event(unload,F_End)
+gui.F_APO_IDRPrice..alwaysontop(False)
+gui.F_APO_IDRPrice..fontname("Arial")
+gui.F_APO_IDRPrice..fontsize(8)
+gui.F_APO_IDRPrice..forecolor(0)
+gui.F_APO_IDRPrice..fontstyle(,,,,)
+gui.F_APO_IDRPrice..BackColor(-2147483633)
+gui.F_APO_IDRPrice..controlbox(True)
+gui.F_APO_IDRPrice..maxbutton(False)
+gui.F_APO_IDRPrice..minbutton(False)
+gui.F_APO_IDRPrice..mousepointer(0)
+gui.F_APO_IDRPrice..moveable(True)
+gui.F_APO_IDRPrice..sizeable(True)
+gui.F_APO_IDRPrice..ShowInTaskBar(True)
+gui.F_APO_IDRPrice..titlebar(True)
+gui.F_APO_IDRPrice.lblIDRPrice.create(label,"IDR Price:",True,1935,255,1,650,1100,True,0,Arial,8,-2147483633,0)
+gui.F_APO_IDRPrice.lblIDRPrice.defaultvalue("")
+gui.F_APO_IDRPrice.lblIDRPrice.controlgroup(0)
+gui.F_APO_IDRPrice.txtIDRPrice.create(textbox,"",True,2160,300,0,620,1360,True,0,Arial,8,-2147483643,1)
+gui.F_APO_IDRPrice.txtIDRPrice.numericonly(1)
+gui.F_APO_IDRPrice.txtIDRPrice.event(keypressenter,txtapoidrprice_change)
+gui.F_APO_IDRPrice.txtIDRPrice.maxLength(10)
+gui.F_APO_IDRPrice.txtIDRPrice.event(lostfocus,txtapoidrprice_change)
+gui.F_APO_IDRPrice.txtIDRPrice.defaultvalue("")
+gui.F_APO_IDRPrice.txtIDRPrice.controlgroup(0)
+gui.F_APO_IDRPrice.lblGSPrice.create(label,"Global Shop Price (IDR/1000)",True,2250,255,1,650,1920,True,0,Arial,8,-2147483633,0)
+gui.F_APO_IDRPrice.lblGSPrice.defaultvalue("")
+gui.F_APO_IDRPrice.lblGSPrice.controlgroup(0)
+gui.F_APO_IDRPrice.txtGSPrice.create(textbox,"",True,2145,300,0,620,2190,False,0,Arial,8,-2147483643,1)
+gui.F_APO_IDRPrice.txtGSPrice.numericonly(1)
+gui.F_APO_IDRPrice.txtGSPrice.maxLength(13)
+gui.F_APO_IDRPrice.txtGSPrice.defaultvalue("")
+gui.F_APO_IDRPrice.txtGSPrice.controlgroup(0)
+gui.F_APO_IDRPrice.cmdAPOSave.create(button)
+gui.F_APO_IDRPrice.cmdAPOSave.caption("Save")
+gui.F_APO_IDRPrice.cmdAPOSave.visible(True)
+gui.F_APO_IDRPrice.cmdAPOSave.size(1215,495)
+gui.F_APO_IDRPrice.cmdAPOSave.zorder(0)
+gui.F_APO_IDRPrice.cmdAPOSave.position(3020,1990)
+gui.F_APO_IDRPrice.cmdAPOSave.enabled(True)
+gui.F_APO_IDRPrice.cmdAPOSave.fontname("Arial")
+gui.F_APO_IDRPrice.cmdAPOSave.fontsize(8)
+gui.F_APO_IDRPrice.cmdAPOSave.event(click,cmdaposave_click)
+gui.F_APO_IDRPrice.cmdAPOSave.defaultvalue("")
+gui.F_APO_IDRPrice.cmdAPOSave.controlgroup(0)
+gui.F_APO_IDRPrice.lbl3.create(label,"VAT Rule",True,780,255,1,660,100,True,0,Arial,8,-2147483633,0)
+gui.F_APO_IDRPrice.lbl3.defaultvalue("")
+gui.F_APO_IDRPrice.lbl3.controlgroup(0)
+gui.F_APO_IDRPrice.lbl4.create(label,"Tax Code",True,855,255,1,1880,85,True,0,Arial,8,-2147483633,0)
+gui.F_APO_IDRPrice.lbl4.defaultvalue("")
+gui.F_APO_IDRPrice.lbl4.controlgroup(0)
+gui.F_APO_IDRPrice.txtCode.create(textbox,"",True,915,300,0,1840,345,False,0,Arial,8,-2147483643,1)
+gui.F_APO_IDRPrice.txtCode.defaultvalue("")
+gui.F_APO_IDRPrice.txtCode.controlgroup(0)
+gui.F_APO_IDRPrice.ddlVAT.create(dropdownlist)
+gui.F_APO_IDRPrice.ddlVAT.visible(True)
+gui.F_APO_IDRPrice.ddlVAT.size(930,330)
+gui.F_APO_IDRPrice.ddlVAT.zorder(0)
+gui.F_APO_IDRPrice.ddlVAT.position(620,330)
+gui.F_APO_IDRPrice.ddlVAT.enabled(True)
+gui.F_APO_IDRPrice.ddlVAT.fontname("Arial")
+gui.F_APO_IDRPrice.ddlVAT.fontsize(8)
+gui.F_APO_IDRPrice.ddlVAT.event(click,APOidrPrice_VATRule)
+gui.F_APO_IDRPrice.ddlVAT.defaultvalue("")
+gui.F_APO_IDRPrice.ddlVAT.controlgroup(0)
+gui.F_APO_IDRPrice.txtVAT.create(textbox,"",True,2025,300,0,2935,1345,True,0,Arial,8,-2147483643,1)
+gui.F_APO_IDRPrice.txtVAT.numericonly(1)
+gui.F_APO_IDRPrice.txtVAT.maxLength(10)
+gui.F_APO_IDRPrice.txtVAT.defaultvalue("")
+gui.F_APO_IDRPrice.txtVAT.controlgroup(0)
+gui.F_APO_IDRPrice.lbl5.create(label,"VAT",True,1935,255,1,2955,1100,True,0,Arial,8,-2147483633,0)
+gui.F_APO_IDRPrice.lbl5.defaultvalue("")
+gui.F_APO_IDRPrice.lbl5.controlgroup(0)
+gui.F_APO_IDRPrice.lbl6.create(label,"IDR Price with VAT",True,1935,255,1,5220,1100,True,0,Arial,8,-2147483633,0)
+gui.F_APO_IDRPrice.lbl6.defaultvalue("")
+gui.F_APO_IDRPrice.lbl6.controlgroup(0)
+gui.F_APO_IDRPrice.txtIDRPriceVAT.create(textbox,"",True,2190,300,0,5200,1330,True,0,Arial,8,-2147483643,1)
+gui.F_APO_IDRPrice.txtIDRPriceVAT.numericonly(1)
+gui.F_APO_IDRPrice.txtIDRPriceVAT.event(keypressenter,txtapoidrvat_change)
+gui.F_APO_IDRPrice.txtIDRPriceVAT.maxLength(10)
+gui.F_APO_IDRPrice.txtIDRPriceVAT.event(lostfocus,txtapoidrvat_change)
+gui.F_APO_IDRPrice.txtIDRPriceVAT.defaultvalue("")
+gui.F_APO_IDRPrice.txtIDRPriceVAT.controlgroup(0)
+gui.F_APO_IDRPrice.lblPercent.create(label,"Tax Rate",True,825,255,1,2960,90,True,0,Arial,8,-2147483633,0)
+gui.F_APO_IDRPrice.lblPercent.defaultvalue("")
+gui.F_APO_IDRPrice.lblPercent.controlgroup(0)
+gui.F_APO_IDRPrice.txtRate.create(textbox,"",True,930,300,0,2940,345,False,0,Arial,8,-2147483643,1)
+gui.F_APO_IDRPrice.txtRate.numericonly(1)
+gui.F_APO_IDRPrice.txtRate.defaultvalue("")
+gui.F_APO_IDRPrice.txtRate.controlgroup(0)
+gui.F_APO_IDRPrice.txtIDRPrice.tabstop(True)
+gui.F_APO_IDRPrice.txtIDRPrice.tabindex(1)
+gui.F_APO_IDRPrice.txtGSPrice.tabstop(True)
+gui.F_APO_IDRPrice.txtGSPrice.tabindex(2)
+gui.F_APO_IDRPrice.cmdAPOSave.tabstop(True)
+gui.F_APO_IDRPrice.cmdAPOSave.tabindex(3)
+
+
+gui.F_ARc_IDRPrice..create
+gui.F_ARc_IDRPrice..caption("AR - Cash Receipts (IDR Price)")
+gui.F_ARc_IDRPrice..size(3600,2865)
+gui.F_ARc_IDRPrice..minx(0)
+gui.F_ARc_IDRPrice..miny(0)
+gui.F_ARc_IDRPrice..position(0,0)
+gui.F_ARc_IDRPrice..event(unload,F_End)
+gui.F_ARc_IDRPrice..alwaysontop(False)
+gui.F_ARc_IDRPrice..fontname("Arial")
+gui.F_ARc_IDRPrice..fontsize(8)
+gui.F_ARc_IDRPrice..forecolor(0)
+gui.F_ARc_IDRPrice..fontstyle(,,,,)
+gui.F_ARc_IDRPrice..BackColor(-2147483633)
+gui.F_ARc_IDRPrice..controlbox(True)
+gui.F_ARc_IDRPrice..maxbutton(False)
+gui.F_ARc_IDRPrice..minbutton(False)
+gui.F_ARc_IDRPrice..mousepointer(0)
+gui.F_ARc_IDRPrice..moveable(True)
+gui.F_ARc_IDRPrice..sizeable(True)
+gui.F_ARc_IDRPrice..ShowInTaskBar(True)
+gui.F_ARc_IDRPrice..titlebar(True)
+gui.F_ARc_IDRPrice.lblIDRPrice.create(label,"IDR Price:",True,1935,255,1,650,200,True,0,Arial,8,-2147483633,0)
+gui.F_ARc_IDRPrice.lblIDRPrice.defaultvalue("")
+gui.F_ARc_IDRPrice.lblIDRPrice.controlgroup(0)
+gui.F_ARc_IDRPrice.txtIDRPrice.create(textbox,"",True,2160,300,0,620,415,True,0,Arial,8,-2147483643,1)
+gui.F_ARc_IDRPrice.txtIDRPrice.event(change,txtarcidrprice_change)
+gui.F_ARc_IDRPrice.txtIDRPrice.numericonly(1)
+gui.F_ARc_IDRPrice.txtIDRPrice.maxLength(10)
+gui.F_ARc_IDRPrice.txtIDRPrice.defaultvalue("")
+gui.F_ARc_IDRPrice.txtIDRPrice.controlgroup(0)
+gui.F_ARc_IDRPrice.lblGSPrice.create(label,"Global Shop Price (IDR/1000)",True,2175,255,1,650,900,True,0,Arial,8,-2147483633,0)
+gui.F_ARc_IDRPrice.lblGSPrice.defaultvalue("")
+gui.F_ARc_IDRPrice.lblGSPrice.controlgroup(0)
+gui.F_ARc_IDRPrice.txtGSPrice.create(textbox,"",True,2145,300,0,620,1200,False,0,Arial,8,-2147483643,1)
+gui.F_ARc_IDRPrice.txtGSPrice.numericonly(1)
+gui.F_ARc_IDRPrice.txtGSPrice.maxLength(13)
+gui.F_ARc_IDRPrice.txtGSPrice.defaultvalue("")
+gui.F_ARc_IDRPrice.txtGSPrice.controlgroup(0)
+gui.F_ARc_IDRPrice.cmdARcSave.create(button)
+gui.F_ARc_IDRPrice.cmdARcSave.caption("Save")
+gui.F_ARc_IDRPrice.cmdARcSave.visible(True)
+gui.F_ARc_IDRPrice.cmdARcSave.size(855,375)
+gui.F_ARc_IDRPrice.cmdARcSave.zorder(0)
+gui.F_ARc_IDRPrice.cmdARcSave.position(1300,1770)
+gui.F_ARc_IDRPrice.cmdARcSave.enabled(True)
+gui.F_ARc_IDRPrice.cmdARcSave.fontname("Arial")
+gui.F_ARc_IDRPrice.cmdARcSave.fontsize(8)
+gui.F_ARc_IDRPrice.cmdARcSave.event(click,cmdarcsave_click)
+gui.F_ARc_IDRPrice.cmdARcSave.defaultvalue("")
+gui.F_ARc_IDRPrice.cmdARcSave.controlgroup(0)
+
+
+gui.F_APi_IDRPrice..create
+gui.F_APi_IDRPrice..caption("Invoice Information (IDR Price)")
+gui.F_APi_IDRPrice..size(3600,3600)
+gui.F_APi_IDRPrice..minx(0)
+gui.F_APi_IDRPrice..miny(0)
+gui.F_APi_IDRPrice..position(0,0)
+gui.F_APi_IDRPrice..event(unload,F_End)
+gui.F_APi_IDRPrice..alwaysontop(False)
+gui.F_APi_IDRPrice..fontname("Arial")
+gui.F_APi_IDRPrice..fontsize(8)
+gui.F_APi_IDRPrice..forecolor(0)
+gui.F_APi_IDRPrice..fontstyle(,,,,)
+gui.F_APi_IDRPrice..BackColor(-2147483633)
+gui.F_APi_IDRPrice..controlbox(True)
+gui.F_APi_IDRPrice..maxbutton(False)
+gui.F_APi_IDRPrice..minbutton(False)
+gui.F_APi_IDRPrice..mousepointer(0)
+gui.F_APi_IDRPrice..moveable(True)
+gui.F_APi_IDRPrice..sizeable(True)
+gui.F_APi_IDRPrice..ShowInTaskBar(True)
+gui.F_APi_IDRPrice..titlebar(True)
+gui.F_APi_IDRPrice.lblIDRPrice.create(label,"IDR Price:",True,1935,255,1,650,200,True,0,Arial,8,-2147483633,0)
+gui.F_APi_IDRPrice.lblIDRPrice.defaultvalue("")
+gui.F_APi_IDRPrice.lblIDRPrice.controlgroup(0)
+gui.F_APi_IDRPrice.txtIDRPrice.create(textbox,"",True,2160,300,0,620,415,True,0,Arial,8,-2147483643,1)
+gui.F_APi_IDRPrice.txtIDRPrice.event(change,txtapiidrprice_change)
+gui.F_APi_IDRPrice.txtIDRPrice.defaultvalue("")
+gui.F_APi_IDRPrice.txtIDRPrice.controlgroup(0)
+gui.F_APi_IDRPrice.lblGSPrice.create(label,"Global Shop Price (IDR/1000)",True,2175,255,1,650,900,True,0,Arial,8,-2147483633,0)
+gui.F_APi_IDRPrice.lblGSPrice.defaultvalue("")
+gui.F_APi_IDRPrice.lblGSPrice.controlgroup(0)
+gui.F_APi_IDRPrice.txtGSPrice.create(textbox,"",True,2145,300,0,620,1200,False,0,Arial,8,-2147483643,1)
+gui.F_APi_IDRPrice.txtGSPrice.numericonly(1)
+gui.F_APi_IDRPrice.txtGSPrice.maxLength(13)
+gui.F_APi_IDRPrice.txtGSPrice.defaultvalue("")
+gui.F_APi_IDRPrice.txtGSPrice.controlgroup(0)
+gui.F_APi_IDRPrice.lblGSExch.create(label,"GS Price Exch:",False,1080,255,1,650,1650,True,0,Arial,8,-2147483633,0)
+gui.F_APi_IDRPrice.lblGSExch.defaultvalue("")
+gui.F_APi_IDRPrice.lblGSExch.controlgroup(0)
+gui.F_APi_IDRPrice.txtGSPriceExc.create(textbox,"",False,2145,300,0,620,1900,False,0,Arial,8,-2147483643,1)
+gui.F_APi_IDRPrice.txtGSPriceExc.numericonly(1)
+gui.F_APi_IDRPrice.txtGSPriceExc.maxLength(15)
+gui.F_APi_IDRPrice.txtGSPriceExc.defaultvalue("")
+gui.F_APi_IDRPrice.txtGSPriceExc.controlgroup(0)
+gui.F_APi_IDRPrice.cmdSave.create(button)
+gui.F_APi_IDRPrice.cmdSave.caption("Save")
+gui.F_APi_IDRPrice.cmdSave.visible(True)
+gui.F_APi_IDRPrice.cmdSave.size(855,375)
+gui.F_APi_IDRPrice.cmdSave.zorder(0)
+gui.F_APi_IDRPrice.cmdSave.position(1300,2400)
+gui.F_APi_IDRPrice.cmdSave.enabled(True)
+gui.F_APi_IDRPrice.cmdSave.fontname("Arial")
+gui.F_APi_IDRPrice.cmdSave.fontsize(8)
+gui.F_APi_IDRPrice.cmdSave.event(click,cmdapisave_click)
+gui.F_APi_IDRPrice.cmdSave.defaultvalue("")
+gui.F_APi_IDRPrice.cmdSave.controlgroup(0)
+gui.F_APi_IDRPrice.lblExch.create(label,"GS Price * Exch",False,1485,255,1,1775,1645,True,0,Arial,8,-2147483633,0)
+gui.F_APi_IDRPrice.lblExch.defaultvalue("")
+gui.F_APi_IDRPrice.lblExch.controlgroup(0)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+
+Variable.Global.fExchRate.Declare(Float,0)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+' Qte Line Screen Populate Hook
+F.Intrinsic.Control.If(V.Caller.Hook,=,10260)
+	Variable.Passed.000203.Set("IDR Price")
+	F.Intrinsic.Control.End
+
+' Execute IDR Price from Script 3 btn
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,10690)
+	F.Intrinsic.Control.CallSub(Subqtidrprice)
+' SO Line Screen Populate Hook
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,12010)
+	Variable.Passed.000210.Set("IDR Price")
+	F.Intrinsic.Control.End
+
+' Execute IDR Price from Script 3 btn
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,12430)
+	F.Intrinsic.Control.CallSub(Subsoidrprice)
+' PO Line Screen Populate Hook
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,17050)
+	Variable.Passed.000102.Set("IDR Price")
+	F.Intrinsic.Control.End
+
+' Execute IDR Price from Script 3 btn
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,17180)
+	F.Intrinsic.Control.If(V.Passed.000045,=,"IDR")
+		F.Intrinsic.Control.CallSub(Subpoidrprice)
+	F.Intrinsic.Control.EndIf
+'Outside PO Print Populate Hook
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,30520)
+	Variable.Passed.000029.Set("IDR Price")
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,30570)
+	F.Intrinsic.Control.CallSub(Subpoidrprice)
+' Auto Purchase Screen Populate Hook
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,34410)
+	Variable.Passed.000176.Set("IDR Price")
+	F.Intrinsic.Control.End
+
+' Execute IDR Price from Script 3 btn
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,34432)
+	F.Intrinsic.Control.CallSub(Subapoidrprice)
+' AR Cash Receipts Screen Populate Hook
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,37901)
+	Variable.Passed.000036.Set("IDR Price")
+	F.Intrinsic.Control.End
+
+' Execute IDR Price from Script 3 btn
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,37904)
+	F.Intrinsic.Control.CallSub(Subarcashidrprice)
+' AP Invoice Information Screen Populate Hook
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,35105)
+	Variable.Passed.000053.Set("IDR Price")
+	F.Intrinsic.Control.End
+
+' AP Invoice IDR Price from Script 3 btn
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,35123)
+	F.Intrinsic.Control.CallSub(Subapinvoiceidrprice)
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndIf
+
+
+
+Program.Sub.Main.End
+
+Program.Sub.F_End.Start
+F.Intrinsic.Control.End
+
+Program.Sub.F_End.End
+
+program.sub.cmdsave_click.start
+V.Passed.000009.Set(V.Screen.F_SO_IDRPrice!txtGSPrice.Text)
+
+F.Intrinsic.Control.End
+
+program.sub.cmdsave_click.End
+
+Program.Sub.subSOidrPrice.Start
+V.Local.iIDRPrice.Declare(Long)
+Gui.F_SO_IDRPrice.txtGSPrice.Text(V.Passed.000105)
+F.Intrinsic.Math.Mult(V.Passed.000105,1000,V.Local.iIDRPrice)
+Gui.F_SO_IDRPrice.txtIDRPrice.Text(V.Local.iIDRPrice)
+F.Intrinsic.Control.If(V.Caller.Switches,=,"VE")
+	Gui.F_SO_IDRPrice.cmdSave.Enabled(False)
+F.Intrinsic.Control.EndIf
+Gui.F_SO_IDRPrice..Show
+
+Program.Sub.subSOidrPrice.End
+
+program.sub.txtidrprice_change.start
+V.Local.fGSPrice.Declare(Float)
+
+F.Intrinsic.Control.If(V.Screen.F_SO_IDRPrice!txtIDRPrice.Text,>,0)
+	F.Intrinsic.Math.Div(V.Screen.F_SO_IDRPrice!txtIDRPrice.Text,1000,V.Local.fGSPrice)
+	Gui.F_SO_IDRPrice.txtGSPrice.Text(V.Local.fGSPrice)
+F.Intrinsic.Control.Else
+	Gui.F_SO_IDRPrice.txtGSPrice.Text("")
+F.Intrinsic.Control.EndIf
+
+program.sub.txtidrprice_change.End
+
+program.sub.txtgsprice_change.start
+V.Local.fIDRPrice.Declare(Float)
+
+F.Intrinsic.Control.If(V.Screen.F_SO_IDRPrice!txtGSPrice.Text,>,0)
+	F.Intrinsic.Math.Mult(V.Screen.F_SO_IDRPrice!txtGSPrice.Text,1000,V.Local.fIDRPrice)
+	Gui.F_SO_IDRPrice.txtIDRPrice.Text(V.Local.fIDRPrice)
+F.Intrinsic.Control.Else
+	Gui.F_SO_IDRPrice.txtIDRPrice.Text("")
+F.Intrinsic.Control.EndIf
+
+program.sub.txtgsprice_change.End
+
+Program.Sub.subPOidrPrice.Start
+V.Local.fIDRPurCost.Declare(Float)
+V.Local.fIDRInvCost.Declare(Float)
+V.Local.iVAT.Declare
+V.Local.sPart.Declare(String)
+V.Local.sLoc.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sFacConv.Declare(Float,0)
+
+V.Local.iVAT.Set(V.Passed.000119)
+
+F.Intrinsic.Control.If(V.Local.iVAT,<>,2)
+	Gui.F_PO_IDRPrice.txtPurCostGS.Text(V.Passed.000022)
+	Gui.F_PO_IDRPrice.txtInvCostGS.Text(V.Passed.000025)
+	
+	F.Intrinsic.Math.Mult(V.Passed.000022,1000,V.Local.fIDRPurCost)
+	F.Intrinsic.Math.Mult(V.Passed.000025,1000,V.Local.fIDRInvCost)
+F.Intrinsic.Control.Else
+	Gui.F_PO_IDRPrice.txtPurCostGS.Text(V.Passed.000111)
+	Gui.F_PO_IDRPrice.txtInvCostGS.Text(V.Passed.000111)
+	
+	F.Intrinsic.Math.Mult(V.Passed.000111,1000,V.Local.fIDRPurCost)
+	F.Intrinsic.Math.Mult(V.Passed.000111,1000,V.Local.fIDRInvCost)
+F.Intrinsic.Control.EndIf
+
+'F.Intrinsic.Math.Mult(V.Passed.000022,1000,V.Local.fIDRPurCost)
+'F.Intrinsic.Math.Mult(V.Passed.000025,1000,V.Local.fIDRInvCost)
+
+Gui.F_PO_IDRPrice.txtIPurCostIDR.Text(V.Local.fIDRPurCost)
+Gui.F_PO_IDRPrice.txtInvCostIDR.Text(V.Local.fIDRInvCost)
+
+F.Intrinsic.String.GSSPartString(V.Passed.000008,V.Passed.000009,V.Local.sPart)
+V.Local.sLoc.Set(V.Passed.000011)
+
+F.odbc.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+F.Intrinsic.String.Concat("SELECT * FROM V_INVENTORY_MSTR WHERE PART='",V.Local.sPart,"' AND LOCATION='",V.Local.sLoc,"'",V.Local.sSql)
+F.ODBC.connection!conx.OpenRecordsetRO("rstFactConv",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.conx!rstFactConv.EOF,=,False)
+	V.Local.sFacConv.Set(V.ODBC.conx!rstFactConv.FieldVal!FACTOR_CONVERSION)
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rstFactConv.Close
+F.ODBC.Connection!conx.Close
+F.Intrinsic.Control.If(V.Local.sFacConv,=,0)
+	Gui.F_PO_IDRPrice.txtConvFact.Text(1)
+F.Intrinsic.Control.Else
+	Gui.F_PO_IDRPrice.txtConvFact.Text(V.Local.sFacConv)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Caller.Switches,=,"Q")
+	Gui.F_PO_IDRPrice.cmdPOSave.Enabled(False)
+F.Intrinsic.Control.EndIf
+Gui.F_PO_IDRPrice..Show
+
+Program.Sub.subPOidrPrice.End
+
+program.sub.cmdposave_click.start
+V.Local.fGSPurCost.Declare
+V.Local.fGSInvCost.Declare
+V.Local.iVAT.Declare
+
+V.Local.fGSPurCost.Set(V.Screen.F_PO_IDRPrice!txtPurCostGS.Text)
+V.Local.fGSInvCost.Set(V.Screen.F_PO_IDRPrice!txtInvCostGS.Text)
+F.Intrinsic.Control.If(V.Caller.Hook,=,17180)
+	V.Local.iVAT.Set(V.Passed.000119)
+	F.Intrinsic.Control.If(V.Local.iVAT,<>,2)
+		V.Passed.000022.Set(V.Local.fGSPurCost)
+		V.Passed.000025.Set(V.Local.fGSInvCost)
+	F.Intrinsic.Control.Else
+		V.Passed.000111.Set(V.Local.fGSPurCost)
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,30570)
+	V.Passed.000009.Set(V.Local.fGSPurCost)
+	V.Passed.000021.Set(V.Local.fGSInvCost)
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndIf
+
+program.sub.cmdposave_click.End
+
+program.sub.txtpurcostgs_change.start
+V.Local.fIDRPurCost.Declare(Float)
+V.Local.fIDRInvCost.Declare(Float)
+V.Local.fGSInvCost.Declare(Float)
+V.Local.fFacConv.Declare(Float,1)
+F.Intrinsic.Control.If(V.Screen.F_PO_IDRPrice!txtPurCostGS.Text,>,0)
+	V.Local.fFacConv.Set(V.Screen.F_PO_IDRPrice!txtConvFact.Text)
+	F.Intrinsic.Math.Mult(V.Screen.F_PO_IDRPrice!txtPurCostGS.Text,1000,V.Local.fIDRPurCost)
+	F.Intrinsic.Math.Mult(V.Screen.F_PO_IDRPrice!txtPurCostGS.Text,1000,V.Local.fIDRInvCost)
+	F.Intrinsic.Math.Div(V.Local.fIDRInvCost,V.Local.fFacConv,V.Local.fIDRInvCost)
+	F.Intrinsic.Math.Div(V.Screen.F_PO_IDRPrice!txtPurCostGS.Text,V.Local.fFacConv,V.Local.fGSInvCost)
+	F.Intrinsic.Math.Round(V.Local.fGSInvCost,6,V.Local.fGSInvCost)
+	Gui.F_PO_IDRPrice.txtIPurCostIDR.Text(V.Local.fIDRPurCost)
+	Gui.F_PO_IDRPrice.txtInvCostIDR.Text(V.Local.fIDRInvCost)
+	Gui.F_PO_IDRPrice.txtInvCostGS.Text(V.Local.fGSInvCost)
+F.Intrinsic.Control.Else
+	Gui.F_PO_IDRPrice.txtIPurCostIDR.Text("")
+	Gui.F_PO_IDRPrice.txtInvCostIDR.Text("")
+	Gui.F_PO_IDRPrice.txtInvCostGS.Text("")
+F.Intrinsic.Control.EndIf
+
+program.sub.txtpurcostgs_change.End
+
+program.sub.txtinvcostgs_change.start
+V.Local.fInvCostIDR.Declare(Float)
+
+F.Intrinsic.Control.If(V.Screen.F_PO_IDRPrice!txtInvCostGS.Text,>,0)
+	F.Intrinsic.Math.Mult(V.Screen.F_PO_IDRPrice!txtInvCostGS.Text,1000,V.Local.fInvCostIDR)
+	Gui.F_PO_IDRPrice.txtInvCostIDR.Text(V.Local.fInvCostIDR)
+F.Intrinsic.Control.Else
+	Gui.F_PO_IDRPrice.txtInvCostIDR.Text("")
+F.Intrinsic.Control.EndIf
+
+program.sub.txtinvcostgs_change.End
+
+program.sub.txtipurcostidr_change.start
+V.Local.fIDRPurCost.Declare(Float)
+V.Local.fIDRInvCost.Declare(Float)
+V.Local.fGSInvCost.Declare(Float)
+V.Local.fGSPurCost.Declare(Float)
+V.Local.fFacConv.Declare(Float,1)
+V.Local.sIDRPurCost.Declare
+V.Local.sIDRInvCost.Declare
+V.Local.sGSInvCost.Declare
+V.Local.sGSPurCost.Declare
+F.Intrinsic.Control.If(V.Screen.F_PO_IDRPrice!txtIPurCostIDR.Text,>,0)
+	V.Local.fFacConv.Set(V.Screen.F_PO_IDRPrice!txtConvFact.Text)
+	F.Intrinsic.Math.Div(V.Screen.F_PO_IDRPrice!txtIPurCostIDR.Text,1000,V.Local.fGSPurCost)
+	F.Intrinsic.Math.Div(V.Screen.F_PO_IDRPrice!txtIPurCostIDR.Text,V.Local.fFacConv,V.Local.fIDRInvCost)
+	F.Intrinsic.Math.Div(V.Local.fIDRInvCost,1000,V.Local.fGSInvCost)
+	F.Intrinsic.Math.Round(V.Local.fGSInvCost,6,V.Local.fGSInvCost)
+	
+	V.Local.fIDRPurCost.Set(V.Screen.F_PO_IDRPrice!txtIPurCostIDR.Text)
+	F.Intrinsic.String.Format(V.Local.fIDRPurCost,"#,0.0000",V.Local.sIDRPurCost)
+	F.Intrinsic.String.Format(V.Local.fGSPurCost,"#,0.0000",V.Local.sGSPurCost)
+	F.Intrinsic.String.Format(V.Local.fGSInvCost,"#,0.0000",V.Local.sGSInvCost)
+	F.Intrinsic.String.Format(V.Local.fIDRInvCost,"#,0.0000",V.Local.sIDRInvCost)
+	Gui.F_PO_IDRPrice.txtIPurCostIDR.Text(V.Local.sIDRPurCost.Trim)
+	Gui.F_PO_IDRPrice.txtPurCostGS.Text(V.Local.sGSPurCost.Trim)
+	Gui.F_PO_IDRPrice.txtInvCostGS.Text(V.Local.sGSInvCost)
+	Gui.F_PO_IDRPrice.txtInvCostIDR.Text(V.Local.sIDRInvCost)
+F.Intrinsic.Control.Else
+	Gui.F_PO_IDRPrice.txtPurCostGS.Text("")
+	Gui.F_PO_IDRPrice.txtInvCostGS.Text("")
+	Gui.F_PO_IDRPrice.txtInvCostIDR.Text("")
+F.Intrinsic.Control.EndIf
+
+program.sub.txtipurcostidr_change.End
+
+program.sub.txtinvcostidr_change.start
+V.Local.fIDRPurCost.Declare(Float)
+V.Local.fIDRInvCost.Declare(Float)
+V.Local.fGSInvCost.Declare(Float)
+V.Local.fGSPurCost.Declare(Float)
+V.Local.fFacConv.Declare(Float,1)
+
+V.Local.fInvCostGS.Declare(Float)
+F.Intrinsic.Control.If(V.Screen.F_PO_IDRPrice!txtInvCostIDR.Text,>,0)
+	V.Local.fFacConv.Set(V.Screen.F_PO_IDRPrice!txtConvFact.Text)
+	F.Intrinsic.Math.Div(V.Screen.F_PO_IDRPrice!txtInvCostIDR.Text,1000,V.Local.fGSInvCost)
+	F.Intrinsic.Math.Mult(V.Screen.F_PO_IDRPrice!txtInvCostIDR.Text,V.Local.fFacConv,V.Local.fIDRPurCost)
+	F.Intrinsic.Math.Div(V.Local.fIDRPurCost,1000,V.Local.fGSPurCost)
+	F.Intrinsic.Math.Round(V.Local.fGSPurCost,6,V.Local.fGSPurCost)
+	
+	Gui.F_PO_IDRPrice.txtPurCostGS.Text(V.Local.fGSPurCost)
+	Gui.F_PO_IDRPrice.txtInvCostGS.Text(V.Local.fGSInvCost)
+	Gui.F_PO_IDRPrice.txtIPurCostIDR.Text(V.Local.fIDRPurCost)
+F.Intrinsic.Control.Else
+	Gui.F_PO_IDRPrice.txtPurCostGS.Text("")
+	Gui.F_PO_IDRPrice.txtInvCostGS.Text("")
+	Gui.F_PO_IDRPrice.txtIPurCostIDR.Text("")
+F.Intrinsic.Control.EndIf
+
+program.sub.txtinvcostidr_change.End
+
+program.sub.cmdqtsave_click.start
+V.Passed.000009.Set(V.Screen.F_QT_IDRPrice!txtGSPrice.Text)
+F.Intrinsic.Control.End
+
+program.sub.cmdqtsave_click.End
+
+Program.Sub.subQTidrPrice.Start
+V.Local.iIDRPrice.Declare(Long)
+Gui.F_QT_IDRPrice.txtGSPrice.Text(V.Passed.000009)
+F.Intrinsic.Math.Mult(V.Passed.000009,1000,V.Local.iIDRPrice)
+Gui.F_QT_IDRPrice.txtIDRPrice.Text(V.Local.iIDRPrice)
+F.Intrinsic.Control.If(V.Caller.Switches,=,"V")
+	Gui.F_QT_IDRPrice.cmdQTSave.Enabled(False)
+F.Intrinsic.Control.EndIf
+Gui.F_QT_IDRPrice..Show
+
+Program.Sub.subQTidrPrice.End
+
+program.sub.txtqtidrprice_change.start
+V.Local.fGSPrice.Declare(Float)
+
+F.Intrinsic.Control.If(V.Screen.F_QT_IDRPrice!txtIDRPrice.Text,>,0)
+	F.Intrinsic.Math.Div(V.Screen.F_QT_IDRPrice!txtIDRPrice.Text,1000,V.Local.fGSPrice)
+	Gui.F_QT_IDRPrice.txtGSPrice.Text(V.Local.fGSPrice)
+F.Intrinsic.Control.Else
+	Gui.F_QT_IDRPrice.txtGSPrice.Text("")
+F.Intrinsic.Control.EndIf
+
+
+program.sub.txtqtidrprice_change.End
+
+program.sub.txtqtgsprice_change.start
+V.Local.fIDRPrice.Declare(Float)
+
+F.Intrinsic.Control.If(V.Screen.F_QT_IDRPrice!txtGSPrice.Text,>,0)
+	F.Intrinsic.Math.Mult(V.Screen.F_QT_IDRPrice!txtGSPrice.Text,1000,V.Local.fIDRPrice)
+	Gui.F_QT_IDRPrice.txtIDRPrice.Text(V.Local.fIDRPrice)
+F.Intrinsic.Control.Else
+	Gui.F_QT_IDRPrice.txtIDRPrice.Text("")
+F.Intrinsic.Control.EndIf
+
+program.sub.txtqtgsprice_change.End
+
+Program.Sub.subAPOidrPrice.Start
+V.Local.iIDRPrice.Declare(Long)
+V.Local.iVAT.Declare
+V.Local.sAuth.Declare
+V.Local.sSQL.Declare
+V.Local.sVendor.Declare
+V.Local.sZone.Declare
+
+V.Local.sVendor.Set(V.Passed.000083)
+Gui.F_APO_IDRPrice.txtVAT.Locked(True)
+Gui.F_APO_IDRPrice.txtRate.Locked(True)
+Gui.F_APO_IDRPrice.txtCode.Locked(True)
+
+F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+F.Intrinsic.String.Build("select dflt_vat_rule as Rule, dflt_tax_grp_code as TaxCode from vat_vend_tax where vendor_id = '{0}'",V.Local.sVendor.Trim,V.Local.sSQL)
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,True)
+	Gui.F_APO_IDRPrice.ddlVAT.Enabled(False)
+	Gui.F_APO_IDRPrice.txtRate.Text("0")
+	Gui.F_APO_IDRPrice.txtIDRPriceVAT.Locked(True)
+F.Intrinsic.Control.Else
+	Gui.F_APO_IDRPrice.txtCode.Text(V.ODBC.conx!rst.FieldValTrim!TaxCode)
+	F.Intrinsic.String.Left(V.ODBC.conx!rst.FieldValTrim!TaxCode,2,V.Local.sZone)
+	F.Intrinsic.String.Mid(V.ODBC.conx!rst.FieldValTrim!TaxCode,3,V.Local.sAuth)
+	V.Local.iVAT.Set(V.ODBC.conx!rst.FieldValFloat!Rule)
+	F.Intrinsic.Control.If(V.Local.iVAT,<>,0)
+		'Default VAT rule is setup with the vendor
+		Gui.F_APO_IDRPrice.ddlVAT.AddItem("1")
+		Gui.F_APO_IDRPrice.ddlVAT.AddItem("2")
+		Gui.F_APO_IDRPrice.ddlVAT.AddItem("3")
+		Gui.F_APO_IDRPrice.ddlVAT.AddItem("4")
+		Gui.F_APO_IDRPrice.ddlVAT.AddItem("5")
+		Gui.F_APO_IDRPrice.ddlVAT.Text(V.Local.iVAT)
+	F.Intrinsic.Control.Else
+		'No default VAT rule setup for the vendor
+		Gui.F_APO_IDRPrice.ddlVAT.Enabled(False)
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.If(V.Local.iVAT,=,2)
+		Gui.F_APO_IDRPrice.txtIDRPrice.Locked(True)
+		Gui.F_APO_IDRPrice.txtIDRPriceVAT.Locked(False)
+	F.Intrinsic.Control.Else
+		Gui.F_APO_IDRPrice.txtIDRPrice.Locked(False)
+		Gui.F_APO_IDRPrice.txtIDRPriceVAT.Locked(True)
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.If(V.Local.iVAT,<>,0)
+		F.ODBC.conx!rst.Close
+		F.Intrinsic.String.Build("select rate from ar_tax_tables where zone = '{0}' and auth = '{1}'",V.Local.sZone.Trim,V.Local.sAuth.Trim,V.Local.sSQL)
+		F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+		Gui.F_APO_IDRPrice.txtRate.Text(V.ODBC.conx!rst.FieldValFloat!rate)
+	F.Intrinsic.Control.Else
+		Gui.F_APO_IDRPrice.txtRate.Text("0")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rst.Close
+F.ODBC.Connection!conx.Close
+
+Gui.F_APO_IDRPrice.txtGSPrice.Text(V.Passed.000088)
+F.Intrinsic.Math.Mult(V.Passed.000088,1000,V.Local.iIDRPrice)
+Gui.F_APO_IDRPrice.txtIDRPrice.Text(V.Local.iIDRPrice)
+Gui.F_APO_IDRPrice..Show
+
+Program.Sub.subAPOidrPrice.End
+
+program.sub.cmdaposave_click.start
+V.Passed.000088.Set(V.Screen.F_APO_IDRPrice!txtGSPrice.Text)
+
+F.Intrinsic.Control.End
+
+program.sub.cmdaposave_click.End
+
+Program.Sub.txtapoidrprice_change.Start
+V.Local.fGSPrice.Declare(Float)
+V.Local.fIDRPriceVAT.Declare
+V.Local.fVAT.Declare
+
+F.Intrinsic.Control.If(V.Screen.F_APO_IDRPrice!txtIDRPrice.Text,>,0)
+	F.Intrinsic.Math.Div(V.Screen.F_APO_IDRPrice!txtIDRPrice.Text,1000,V.Local.fGSPrice)
+	Gui.F_APO_IDRPrice.txtGSPrice.Text(V.Local.fGSPrice)
+	F.Intrinsic.Math.Mult(V.Screen.F_APO_IDRPrice!txtIDRPrice.Text,V.Screen.F_APO_IDRPrice!txtRate.Text,V.Local.fVAT)
+	Gui.F_APO_IDRPrice.txtVAT.Text(V.Local.fVAT)
+	F.Intrinsic.Math.Add(V.Screen.F_APO_IDRPrice!txtIDRPrice.Text,V.Local.fVAT,V.Local.fIDRPriceVAT)
+	Gui.F_APO_IDRPrice.txtIDRPriceVAT.Text(V.Local.fIDRPriceVAT)
+F.Intrinsic.Control.Else
+	Gui.F_APO_IDRPrice.txtGSPrice.Text("")
+	Gui.F_APO_IDRPrice.txtVAT.Text("")
+	Gui.F_APO_IDRPrice.txtIDRPriceVAT.Text("")
+F.Intrinsic.Control.EndIf
+
+Program.Sub.txtapoidrprice_change.End
+
+Program.Sub.txtapogsprice_change.Start
+V.Local.fIDRPrice.Declare(Float)
+
+F.Intrinsic.Control.If(V.Screen.F_APO_IDRPrice!txtGSPrice.Text,>,0)
+	F.Intrinsic.Math.Mult(V.Screen.F_APO_IDRPrice!txtGSPrice.Text,1000,V.Local.fIDRPrice)
+	Gui.F_APO_IDRPrice.txtIDRPrice.Text(V.Local.fIDRPrice)
+F.Intrinsic.Control.Else
+	Gui.F_APO_IDRPrice.txtIDRPrice.Text("")
+F.Intrinsic.Control.EndIf
+
+Program.Sub.txtapogsprice_change.End
+
+Program.Sub.subARCashidrPrice.Start
+V.Local.iIDRPrice.Declare(Long)
+F.Intrinsic.Control.If(V.Passed.000027,=,"N/A")
+	Gui.F_ARc_IDRPrice.txtGSPrice.Text(V.Passed.000024)
+	F.Intrinsic.Math.Mult(V.Passed.000024,1000,V.Local.iIDRPrice)
+F.Intrinsic.Control.Else
+	Gui.F_ARc_IDRPrice.txtGSPrice.Text(V.Passed.000015)
+	F.Intrinsic.Math.Mult(V.Passed.000015,1000,V.Local.iIDRPrice)
+F.Intrinsic.Control.EndIf
+Gui.F_ARc_IDRPrice.txtIDRPrice.Text(V.Local.iIDRPrice)
+Gui.F_ARc_IDRPrice..Show
+
+Program.Sub.subARCashidrPrice.End
+
+program.sub.cmdarcsave_click.start
+F.Intrinsic.Control.If(V.Passed.000027,=,"N/A")
+	V.Passed.000024.Set(V.Screen.F_ARc_IDRPrice!txtGSPrice.Text)
+F.Intrinsic.Control.Else
+	V.Passed.000015.Set(V.Screen.F_ARc_IDRPrice!txtGSPrice.Text)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.End
+
+program.sub.cmdarcsave_click.End
+
+Program.Sub.txtarcidrprice_change.Start
+V.Local.fGSPrice.Declare(Float)
+
+F.Intrinsic.Control.If(V.Screen.F_ARc_IDRPrice!txtIDRPrice.Text,>,0)
+	F.Intrinsic.Math.Div(V.Screen.F_ARc_IDRPrice!txtIDRPrice.Text,1000,V.Local.fGSPrice)
+	Gui.F_ARc_IDRPrice.txtGSPrice.Text(V.Local.fGSPrice)
+F.Intrinsic.Control.Else
+	Gui.F_ARc_IDRPrice.txtGSPrice.Text("")
+F.Intrinsic.Control.EndIf
+
+Program.Sub.txtarcidrprice_change.End
+
+Program.Sub.txtarcgsprice_change.Start
+V.Local.fIDRPrice.Declare(Float)
+
+F.Intrinsic.Control.If(V.Screen.F_ARc_IDRPrice!txtGSPrice.Text,>,0)
+	F.Intrinsic.Math.Mult(V.Screen.F_ARc_IDRPrice!txtGSPrice.Text,1000,V.Local.fIDRPrice)
+	Gui.F_ARc_IDRPrice.txtIDRPrice.Text(V.Local.fIDRPrice)
+F.Intrinsic.Control.Else
+	Gui.F_ARc_IDRPrice.txtIDRPrice.Text("")
+F.Intrinsic.Control.EndIf
+
+Program.Sub.txtarcgsprice_change.End
+
+Program.Sub.subAPInvoiceidrPrice.Start
+V.Local.sExchlbl.Declare(String)
+V.Local.iIDRPrice.Declare(Long)
+Gui.F_APi_IDRPrice.txtGSPrice.Text(V.Passed.000023)
+F.Intrinsic.Math.Mult(V.Passed.000023,1000,V.Local.iIDRPrice)
+Gui.F_APi_IDRPrice.txtIDRPrice.Text(V.Local.iIDRPrice)
+F.Intrinsic.Control.If(V.Passed.000170,>,0)
+	V.Global.fExchRate.Set(V.Passed.000170)
+	V.Local.sExchlbl.Set("GS Price*")
+	F.Intrinsic.String.Concat(V.Local.sExchlbl,V.Global.fExchRate,V.Local.sExchlbl)
+	Gui.F_APi_IDRPrice.lblExch.Caption(V.Local.sExchlbl)
+	Gui.F_APi_IDRPrice.lblExch.Visible(True)
+	Gui.F_APi_IDRPrice.lblGSExch.Visible(True)
+	Gui.F_APi_IDRPrice.txtGSPriceExc.Visible(True)
+F.Intrinsic.Control.EndIf
+Gui.F_APi_IDRPrice..Show
+
+Program.Sub.subAPInvoiceidrPrice.End
+
+program.sub.cmdapisave_click.start
+V.Passed.000023.Set(V.Screen.F_APi_IDRPrice!txtGSPrice.Text)
+F.Intrinsic.Control.End
+
+program.sub.cmdapisave_click.End
+
+Program.Sub.txtapigsprice_change.Start
+V.Local.fIDRPrice.Declare(Float)
+V.Local.fGSExch.Declare(Float)
+
+F.Intrinsic.Control.If(V.Screen.F_API_IDRPrice!txtGSPrice.Text,>,0)
+	F.Intrinsic.Math.Mult(V.Screen.F_API_IDRPrice!txtGSPrice.Text,1000,V.Local.fIDRPrice)
+	Gui.F_API_IDRPrice.txtIDRPrice.Text(V.Local.fIDRPrice)
+	F.Intrinsic.Control.If(V.Global.fExchRate,>,0)
+		F.Intrinsic.Math.Mult(V.Screen.F_APi_IDRPrice!txtGSPrice.Text,V.Global.fExchRate,V.Local.fGSExch)
+		Gui.F_APi_IDRPrice.txtGSPriceExc.Text(V.Local.fGSExch)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	Gui.F_API_IDRPrice.txtIDRPrice.Text("")
+	Gui.F_APi_IDRPrice.txtGSPriceExc.Text("")
+F.Intrinsic.Control.EndIf
+
+Program.Sub.txtapigsprice_change.End
+
+Program.Sub.txtapiidrprice_change.Start
+V.Local.fGSPrice.Declare(Float)
+
+F.Intrinsic.Control.If(V.Screen.F_API_IDRPrice!txtIDRPrice.Text,>,0)
+	F.Intrinsic.Math.Div(V.Screen.F_API_IDRPrice!txtIDRPrice.Text,1000,V.Local.fGSPrice)
+	Gui.F_API_IDRPrice.txtGSPrice.Text(V.Local.fGSPrice)
+F.Intrinsic.Control.Else
+	Gui.F_API_IDRPrice.txtGSPrice.Text("")
+	Gui.F_APi_IDRPrice.txtGSPriceExc.Text("")
+F.Intrinsic.Control.EndIf
+
+Program.Sub.txtapiidrprice_change.End
+
+Program.Sub.txtapigspriceexch_change.Start
+
+Program.Sub.txtapigspriceexch_change.End
+
+Program.Sub.subOutsideidrPrice.Start
+V.Local.fIDRPurCost.Declare(Float)
+V.Local.fIDRInvCost.Declare(Float)
+V.Local.sPart.Declare(String)
+V.Local.sLoc.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sFacConv.Declare(Float,0)
+
+Gui.F_PO_IDRPrice.txtPurCostGS.Text(V.Passed.000009)
+Gui.F_PO_IDRPrice.txtInvCostGS.Text(V.Passed.000021)
+
+F.Intrinsic.Math.Mult(V.Passed.000009,1000,V.Local.fIDRPurCost)
+F.Intrinsic.Math.Mult(V.Passed.000021,1000,V.Local.fIDRInvCost)
+
+Gui.F_PO_IDRPrice.txtIPurCostIDR.Text(V.Local.fIDRPurCost)
+Gui.F_PO_IDRPrice.txtInvCostIDR.Text(V.Local.fIDRInvCost)
+
+V.Local.sPart.Set(V.Passed.000004)
+'F.Intrinsic.String.GSSPartString(V.Passed.000008,V.Passed.000009,V.Local.sPart)
+V.Local.sLoc.Set(V.Passed.000007)
+
+F.odbc.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+F.Intrinsic.String.Concat("SELECT * FROM V_INVENTORY_MSTR WHERE PART='",V.Local.sPart,"' AND LOCATION='",V.Local.sLoc,"'",V.Local.sSql)
+F.ODBC.connection!conx.OpenRecordsetRO("rstFactConv",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.conx!rstFactConv.EOF,=,False)
+	V.Local.sFacConv.Set(V.ODBC.conx!rstFactConv.FieldVal!FACTOR_CONVERSION)
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rstFactConv.Close
+F.ODBC.Connection!conx.Close
+F.Intrinsic.Control.If(V.Local.sFacConv,=,0)
+	Gui.F_PO_IDRPrice.txtConvFact.Text(1)
+F.Intrinsic.Control.Else
+	Gui.F_PO_IDRPrice.txtConvFact.Text(V.Local.sFacConv)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Caller.Switches,=,"Q")
+	Gui.F_PO_IDRPrice.cmdPOSave.Enabled(False)
+F.Intrinsic.Control.EndIf
+Gui.F_PO_IDRPrice..Show
+
+Program.Sub.subOutsideidrPrice.End
+
+Program.Sub.APOidrPrice_VATRule.Start
+V.Local.iVAT.Declare
+
+V.Local.iVAT.Set(V.Screen.F_APO_IDRPrice!ddlVAT.Text)
+
+F.Intrinsic.Control.If(V.Local.iVAT,=,2)
+	Gui.F_APO_IDRPrice.txtIDRPrice.Locked(True)
+	Gui.F_APO_IDRPrice.txtIDRPriceVAT.Locked(False)
+F.Intrinsic.Control.Else
+	Gui.F_APO_IDRPrice.txtIDRPrice.Locked(False)
+	Gui.F_APO_IDRPrice.txtIDRPriceVAT.Locked(True)
+F.Intrinsic.Control.EndIf
+
+Program.Sub.APOidrPrice_VATRule.End
+
+Program.Sub.txtapoidrvat_change.Start
+V.Local.fGSPrice.Declare(Float)
+V.Local.fIDRPrice.Declare
+V.Local.fRate.Declare
+V.Local.fVAT.Declare
+
+F.Intrinsic.Control.If(V.Screen.F_APO_IDRPrice!txtIDRPriceVAT.Text,>,0)
+	F.Intrinsic.Math.Add(V.Screen.F_APO_IDRPrice!txtRate.Text,1,V.Local.fRate)
+	F.Intrinsic.Math.Div(V.Screen.F_APO_IDRPrice!txtIDRPriceVAT.Text,V.Local.fRate,V.Local.fIDRPrice)
+	Gui.F_APO_IDRPrice.txtIDRPrice.Text(V.Local.fIDRPrice)
+	F.Intrinsic.Math.Div(V.Local.fIDRPrice,1000,V.Local.fGSPrice)
+	Gui.F_APO_IDRPrice.txtGSPrice.Text(V.Local.fGSPrice)
+	F.Intrinsic.Math.Mult(V.Local.fIDRPrice,V.Screen.F_APO_IDRPrice!txtRate.Text,V.Local.fVAT)
+	Gui.F_APO_IDRPrice.txtVAT.Text(V.Local.fVAT)
+F.Intrinsic.Control.Else
+	Gui.F_APO_IDRPrice.txtGSPrice.Text("")
+	Gui.F_APO_IDRPrice.txtVAT.Text("")
+	Gui.F_APO_IDRPrice.txtIDRPriceVAT.Text("")
+F.Intrinsic.Control.EndIf
+
+
+
+Program.Sub.txtapoidrvat_change.End
+
+Program.Sub.Comments.Start
+${$0$}$GAB_SO_PO_IDRPrice$}$RICARDO$}$18/7/2012$}$False
+${$1$}$$}$$}$12$}$35123$}$APS0043A-SCRIPT-3-HOOK$}$27/11/2012 10:46:07 AM$}$(Program: AP0043GI; Screen: APS0043A)
+
+${$1$}$$}$$}$11$}$35105$}$APS0043A-POPULATE-HOOK$}$27/11/2012 10:45:57 AM$}$(Program: AP0043GI; Screen: APS0043A)
+
+${$1$}$$}$$}$10$}$37904$}$SCRIPT-3$}$27/11/2012 10:45:38 AM$}$(Program: AR0044GI; Screen: ARS044C)
+
+${$1$}$$}$$}$9$}$37901$}$POPULATE$}$27/11/2012 10:45:07 AM$}$(Program: AR0044GI; Screen: ARS044C)
+
+${$1$}$$}$$}$8$}$34432$}$PUSA60M-SCRIPT-3-HOOK$}$27/11/2012 10:44:56 AM$}$(Program: PURA60GM; Screen: PUSA60M)
+
+${$1$}$$}$$}$7$}$34410$}$PUSA60M-POPULATE-HOOK$}$27/11/2012 10:44:28 AM$}$(Program: PURA60GM; Screen: PUSA60M)
+
+${$1$}$$}$$}$6$}$10690$}$Script 3 Hook$}$27/11/2012 10:44:07 AM$}$(Program: QTE201; Screen: QTS0201L)
+
+${$1$}$$}$$}$5$}$10260$}$Populate Hook$}$27/11/2012 10:43:26 AM$}$(Program: QTE201; Screen: QTS0201L)
+
+${$1$}$$}$$}$4$}$17180$}$PUS064LN-SCRIPT-3-HOOK (PO LINES)$}$18/7/2012 12:54:42 PM$}$(Program: PUR064GI; Screen: PUS064LN)
+
+${$1$}$$}$$}$3$}$17050$}$PUS064LN-POPULATE-HOOK (PO LINES)$}$18/7/2012 12:54:29 PM$}$(Program: PUR064GI; Screen: PUS064LN)
+
+${$1$}$$}$$}$1$}$12430$}$OES0201I-SCRIPT-3-HOOK$}$18/7/2012 10:24:29 AM$}$(Program: ORD201; Screen: OES0201I)
+
+${$1$}$$}$$}$0$}$12010$}$OES0201I-POPULATE-HOOK$}$18/7/2012 10:23:53 AM$}$(Program: ORD201; Screen: OES0201I)
+
+${$3$}$0$}$$}$0$}$-1$}$$}$12:00:00 AM$}$Sales Orders and Work Order Revisions
+Hooks:
+12010 OES0201I-Populate- Hook
+12420 OES0201I-Script 2-Hook
+16630 JBS0010GI-Populate-Hook
+16680 JBS001-Script2-Hook
+13580 WOS061-Populate-Hook
+13630 WOS061-Script2-Hook
+
+Table:
+GAB_ORDER_REV
+Program.Sub.Comments.End
+
